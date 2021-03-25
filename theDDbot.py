@@ -22,7 +22,9 @@ def main():
 #Here is where I filter submissions by 'flair' and compose my reply comment
 def process_post(post):
     if post.link_flair_text == "DD/Research" or post.link_flair_text == "Research/DD" or post.link_flair_text == "DD + Research":
-        post.reply((str(post.author) + "'s account was created " + "**" + str(date.fromtimestamp(post.author.created_utc)) + "** " "\n\nThis redditor has " + "**" + str(post.author.link_karma) + "**" + " post karma" + "\n\nThis redditor has " + "**" + str(post.author.comment_karma) + "**" + " comment karma"))
+        post.reply((str(post.author) + "'s account was created " + "**" + str(date.fromtimestamp(post.author.created_utc)) 
+                    + "** " "\n\nThis redditor has " + "**" + str(post.author.link_karma) + "**" + " post karma" 
+                    + "\n\nThis redditor has " + "**" + str(post.author.comment_karma) + "**" + " comment karma"))
         time.sleep(660)
 
 if __name__ == "__main__":
